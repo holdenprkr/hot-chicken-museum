@@ -8,7 +8,7 @@ function Map() {
     const [viewport, setViewport] = useState({
         width: '100vw',
         height: '100vh',
-        latitude: 36.137698356986476,
+        latitude: 36.1,
         longitude: -86.7755126953125,
         zoom: 10,
         maxBounds: [[26.137698356986476, -96.7755126953125], [46.137698356986476, -76.7755126953125]]
@@ -51,10 +51,16 @@ function Map() {
 
                 {chosenMarker ? (
                     <Popup
+                        className="chicken-popup"
                         latitude={chosenMarker.coordinates.latitude}
                         longitude={chosenMarker.coordinates.longitude}
                         onClose={() => setChosenMarker(null)}>
                         <h2>{chosenMarker.name}</h2>
+                        <img src={chosenMarker.image_url} alt="" className="restaurant-image" />
+                        <p className="restaurant-info">{chosenMarker.rating} ⭐</p>
+                        <p className="restaurant-info">{chosenMarker.location.address1}</p>
+                        <p className="restaurant-info">{chosenMarker.location.city}, {chosenMarker.location.state} {chosenMarker.location.zip_code}</p>
+                        <p className="restaurant-info">{chosenMarker.display_phone}</p>
                     </Popup>
                 ) : null}
             </ReactMapGL >

@@ -3,6 +3,28 @@
     border: none;
 }
 
+.chicken-marker:focus {
+    outline: 0;
+}
+
 .chicken-icon {
     width: 20px;
+}
+
+.restaurant-image {
+    max-width: 400px;
+    max-height: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3%;
+}
+
+.chicken-popup {
+    text-align: center;
+}
+
+.restaurant-info {
+    line-height: 6px;
+    font-weight: bolder;
 }
