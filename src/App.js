@@ -3,11 +3,7 @@ import ApplicationViews from './ApplicationViews'
 import './App.css';
 
 function App() {
-  return (
-    <>
-      <ApplicationViews />
-    </>
-  );
+  return (<> <ApplicationViews /> </>);
 }
 
 export default App;
