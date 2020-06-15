@@ -57,7 +57,7 @@ function Map() {
                         onClose={() => setChosenMarker(null)}>
                         <h2>{chosenMarker.name}</h2>
                         <img src={chosenMarker.image_url} alt="" className="restaurant-image" />
-                        <p className="restaurant-info">{chosenMarker.rating} <span role="img" alt="Star emoji">⭐</span></p>
+                        <p className="restaurant-info">Rating: {chosenMarker.rating}</p>
                         <p className="restaurant-info">{chosenMarker.location.address1}</p>
                         <p className="restaurant-info">{chosenMarker.location.city}, {chosenMarker.location.state} {chosenMarker.location.zip_code}</p>
                         <p className="restaurant-info">{chosenMarker.display_phone}</p>
